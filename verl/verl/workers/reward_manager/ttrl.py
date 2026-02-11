@@ -40,7 +40,9 @@ class TTRLRewardManager:
 
 
     def _data_source_to_task(self, data_source):
-        if data_source in ["MATH-TTT", "AIME-TTT", "AMC-TTT","data/AIME-TTT"]:
+        if data_source in ["refcoco", "refcoco+", "refcocog", "visual_genome", "flickr30k"]:
+            return "grounding"
+        elif data_source in ["MATH-TTT", "AIME-TTT", "AMC-TTT","data/AIME-TTT"]:
             return "math"
         elif data_source in ["GPQA-TTT"]:
             return "gpqa"
